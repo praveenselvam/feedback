@@ -1,5 +1,11 @@
 Feedback::Application.routes.draw do
 
+  resources :karma_items
+
+
+  resources :appreciations
+
+
   root :to => 'people#index' 
 
   resources :people

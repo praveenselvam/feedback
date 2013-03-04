@@ -1,0 +1,2 @@
+module KarmaItemsHelper
+end

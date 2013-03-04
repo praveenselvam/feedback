@@ -1,0 +1,25 @@
+<%= form_for(@karma_item) do |f| %>
+  <% if @karma_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@karma_item.errors.count, "error") %> prohibited this karma_item from being saved:</h2>
+
+      <ul>
+      <% @karma_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br />
+    <%= f.number_field :points %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
