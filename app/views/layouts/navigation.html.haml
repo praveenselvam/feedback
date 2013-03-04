@@ -1,0 +1,23 @@
+%header.navbar.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      .row-fluid
+      %a.brand{"href"=>"#{root_path}"}
+        %img{"src"=>"/assets/indix_logo.png","alt"=>"Cosmos"}
+
+      %ul.nav
+        - if user_signed_in?
+          %form.navbar-search
+            %input.search-query.span3#cosmos-search{"type"=>"text","placeholder"=>"Search"}
+        - else
+          %li
+            = link_to 'Login with Indix.com', user_omniauth_authorize_path(:google_apps)
+
+      - if user_signed_in?    
+        %ul.nav.pull-right
+          %li
+            %a{"href"=>"#"}
+              #{current_user.name}
+          %li
+            %a{"href"=>"#{destroy_user_session_path}",:method=>'delete'}
+              Logout

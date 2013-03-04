@@ -8,7 +8,12 @@ gem 'rails', '3.2.11'
 gem 'sqlite3'
 gem 'execjs'
 gem 'therubyracer', '0.10.1', :platforms => :ruby
+gem "haml", ">= 3.1.4"
 
+group :development do
+  gem "better_errors"
+  gem "haml-rails", ">= 0.3.4"
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

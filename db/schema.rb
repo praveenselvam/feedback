@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130301125816) do
+ActiveRecord::Schema.define(:version => 20130303164101) do
+
+  create_table "appreciations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "description"
+    t.string   "name"
+    t.integer  "karma"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "karma_items", :force => true do |t|
+    t.string   "name"
+    t.integer  "points"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "people", :force => true do |t|
     t.string   "name"

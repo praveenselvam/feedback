@@ -1,15 +1,9 @@
 Feedback::Application.routes.draw do
 
+  root :to => 'home#index'
   resources :karma_items
-
-
   resources :appreciations
-
-
-  root :to => 'people#index' 
-
   resources :people
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
