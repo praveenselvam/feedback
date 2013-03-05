@@ -1,5 +1,8 @@
 Feedback::Application.routes.draw do
 
+  resources :gifts
+
+
   root :to => 'home#index'
   resources :karma_items
   resources :appreciations

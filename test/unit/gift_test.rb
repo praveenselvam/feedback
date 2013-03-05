@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class KarmaItemTest < ActiveSupport::TestCase
+class GiftTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

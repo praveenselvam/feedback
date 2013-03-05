@@ -1,6 +1,6 @@
-class CreateKarmaItems < ActiveRecord::Migration
+class CreateGifts < ActiveRecord::Migration
   def change
-    create_table :karma_items do |t|
+    create_table :gifts do |t|
       t.string :name
       t.integer :points
 
